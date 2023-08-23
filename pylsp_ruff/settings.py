@@ -23,6 +23,7 @@ class PluginSettings:
     per_file_ignores: Optional[Dict[str, List[str]]] = None
 
     format: Optional[List[str]] = None
+    overwrite_file_ext: Optional[str] = None
 
     severities: Optional[Dict[str, str]] = None
 

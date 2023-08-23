@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import re
 import sys
 from pathlib import PurePath
@@ -502,6 +503,10 @@ def build_arguments(
     args.append("--force-exclude")
     # Pass filename to ruff for per-file-ignores, catch unsaved
     if document_path != "":
+        if settings.overwrite_file_ext is not None:
+            document_path = (
+                os.path.splitext(document_path)[0] + settings.overwrite_file_ext
+            )
         args.append(f"--stdin-filename={document_path}")
 
     if settings.config:
