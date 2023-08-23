@@ -67,6 +67,7 @@ the valid configuration keys:
  - `pylsp.plugins.ruff.extendSelect`: Same as select, but append to existing error codes.
  - `pylsp.plugins.ruff.format`: List of error codes to fix during formatting. The default is `["I"]`, any additional codes are appended to this list.
  - `pylsp.plugins.ruff.severities`: Dictionary of custom severity levels for specific codes, see [below](#custom-severities).
+ - `pylsp.plugins.ruff.overwriteFileExt`: File extension string (for example ".py"). This is usefull when using jupyter-lsp.
 
 For more information on the configuration visit [Ruff's homepage](https://beta.ruff.rs/docs/configuration/).
 
